@@ -87,7 +87,7 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)
             bindings = <
 //            |             |             |             |             |             |             |             |             |             |             |             |             |
 &bt BT_CLR    &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                              &trans        &trans        &trans        &trans        &trans        &trans
-&none         &none         &kp C_MUTE    &kp C_VOL_DN  &kp C_VOL_UP  &none                                     &kp LA(LEFT)  &none         &none         &kp LA(RIGHT) &CAPS         &none
+&none         &none         &kp C_MUTE    &kp C_VOL_DN  &kp C_VOL_UP  &none                                     &kp LA(LEFT)  &none         &none         &kp LA(RIGHT) &kp CAPS      &none
 &none         &kp LGUI      &kp LALT      &kp LCTRL     &kp LSHFT     &kp RALT                                  &kp LEFT      &kp DOWN      &kp UP        &kp RIGHT     &caps_word    &none
 &none         &none         &none         &none         &none         &none         &kp LBKT      &kp RBKT      &kp HOME      &kp PG_DN     &kp PG_UP     &kp END       &kp PSCRN     &none
                                           &none         &kc TAB       &kc BSPC      &kc DEL       &none         &none         &none         &none
