@@ -3,8 +3,8 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/ext_power.h>
 
-#include "../zmk-nodefree-config/helper.h"
-#include "../zmk-nodefree-config/keypos_def/keypos_58keys.h"
+#include "zmk-nodefree-config/helper.h"
+#include "zmk-nodefree-config/keypos_def/keypos_58keys.h"
 
 #define QWE 0
 #define COL 1
