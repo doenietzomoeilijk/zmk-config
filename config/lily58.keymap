@@ -12,6 +12,7 @@
 #define NUM 3
 #define SYM 4
 #define FUN 5
+#define ADJ 6
 
 /* Homerow mods, lifted from urob base.keymap */
 /*
