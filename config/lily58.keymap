@@ -68,7 +68,7 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)
 &kp TAB       &kp Q         &kp W         &kp E         &kp R         &kp T                                     &kp Y         &kp U         &kp I         &kp O         &kp P         &kp BSPC
 &caps_word    &hml LGUI A   &hml LALT S   &hml LCTRL D  &hml LSHFT F  &hml RALT G                               &hmr RALT H   &hmr RSHFT J  &hmr LCTRL K  &hmr LALT L   &hmr RGUI SEMI &kp SQT
 &kp GRAVE     &kp Z         &kp X         &kp C         &kp V         &kp B         &kp LBKT      &kp RBKT      &kp N         &kp M         &kp COMMA     &kp DOT       &kp FSLH      &kp BSLH
-                                          &kp LALT      &lt FUN TAB   &lt NAV BSPC  &lt NUM DEL   &lt NAV RET   &lt SYM SPACE &lt ADJ ESC   &kp RGUI
+                                          &none         &lt FUN TAB   &lt NAV BSPC  &lt NUM DEL   &lt NAV RET   &lt SYM SPACE &lt ADJ ESC   &none
             >;
         };
 
@@ -79,7 +79,7 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)
 &kp TAB       &kp Q         &kp W         &kp E         &kp R         &kp T                                     &kp Y         &kp U         &kp I         &kp O         &kp P         &kp BSPC
 &caps_word    &hml LGUI A   &hml LALT S   &hml LCTRL D  &hml LSHFT F  &hml RALT G                               &hmr RALT H   &hmr RSHFT J  &hmr LCTRL K  &hmr LALT L   &hmr GUI SEMI &kp SQT
 &kp GRAVE     &kp Z         &kp X         &kp C         &kp V         &kp B         &kp LBKT      &kp RBKT      &kp N         &kp M         &kp COMMA     &kp DOT       &kp FSLH      &kp BSLH
-                                          &kp LALT      &lt FUN TAB   &lt NAV BSPC  &lt NUM DEL   &lt NAV RET   &lt SYM SPACE &lt ADJ ESC   &kp RGUI
+                                          &none         &lt FUN TAB   &lt NAV BSPC  &lt NUM DEL   &lt NAV RET   &lt SYM SPACE &lt ADJ ESC   &none
             >;
         };
 
@@ -89,7 +89,7 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)
 &bt BT_CLR    &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                              &trans        &trans        &trans        &trans        &trans        &trans
 &none         &none         &kp C_MUTE    &kp C_VOL_DN  &kp C_VOL_UP  &none                                     &kp LA(LEFT)  &none         &none         &kp LA(RIGHT) &kp CAPS      &none
 &none         &kp LGUI      &kp LALT      &kp LCTRL     &kp LSHFT     &kp RALT                                  &kp LEFT      &kp DOWN      &kp UP        &kp RIGHT     &caps_word    &none
-&none         &none         &none         &none         &none         &none         &kp LBKT      &kp RBKT      &kp HOME      &kp PG_DN     &kp PG_UP     &kp END       &kp PSCRN     &none
+&none         &none         &none         &none         &out OUT_BLE  &out OUT_USB  &none         &none         &kp HOME      &kp PG_DN     &kp PG_UP     &kp END       &kp PSCRN     &none
                                           &none         &kp TAB       &kp BSPC      &kp DEL       &none         &none         &none         &none
             >;
         };
@@ -100,7 +100,7 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)
 &trans        &trans        &trans        &trans        &trans        &trans                                    &trans        &trans        &trans        &trans        &trans        &trans
 &none         &none         &none         &none         &none         &none                                     &kp LBKT      &kp N7        &kp N8        &kp N9        &kp RBKT      &trans
 &none         &kp LGUI      &kp LALT      &kp LCTRL     &kp LSHFT     &kp RALT                                  &kp MINUS     &kp N4        &kp N5        &kp N6        &kp EQUAL     &none
-&none         &none         &none         &none         &none         &none         &kp LBKT      &kp RBKT      &kp LT        &kp N1        &kp N2        &kp N3        &kp GT        &none
+&none         &none         &none         &none         &none         &none         &none         &none         &kp LT        &kp N1        &kp N2        &kp N3        &kp GT        &none
                                           &none         &kp TAB       &kp BSPC      &kp DEL       &none         &kp N0        &kp DOT       &none
             >;
         };
@@ -111,7 +111,7 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)
 &trans        &trans        &trans        &trans        &trans        &trans                                    &trans        &trans        &trans        &trans        &trans        &trans
 &none         &kp LT        &kp MINUS     &kp EQUAL     &kp GT        &none                                     &none         &none         &none         &none         &none         &none
 &none         &kp LBKT      &kp RBKT      &kp LPAR      &kp RPAR      &kp BSLH                                  &kp RALT      &kp RSHFT     &kp RCTRL     &kp LALT      &kp RGUI      &none
-&none         &kp LBRC      &kp RBRC      &kp GRAVE     &kp APOS      &none                                     &none         &none         &none         &none         &none         &none
+&none         &kp LBRC      &kp RBRC      &kp GRAVE     &kp APOS      &none         &none         &none         &none         &none         &none         &none         &none         &none
                                           &none         &none         &none         &none         &none         &none         &none         &none
             >;
         };
@@ -122,42 +122,11 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)
 &trans        &kp F1        &kp F2        &kp F3        &kp F4        &kp F5                                    &none         &kp F10       &kp F11       &kp F12       &none         &none
 &none         &none         &none         &none         &none         &none                                     &none         &kp F7        &kp F8        &kp F9        &kp F12       &none
 &none         &kp LGUI      &kp LALT      &kp LCTRL     &kp LSHFT     &kp RALT                                  &none         &kp F4        &kp F5        &kp F6        &kp F11       &none
-&none         &none         &none         &none         &none         &none         &kp LBKT      &kp RBKT      &none         &kp F1        &kp F2        &kp F3        &kp F10       &none
+&none         &none         &none         &none         &none         &none         &none         &none         &none         &kp F1        &kp F2        &kp F3        &kp F10       &none
                                           &none         &none         &none         &none         &none         &none         &none         &none
             >;
         };
 
-        lower_layer {
-// ------------------------------------------------------------------------------------------------------------
-// | BTCLR | BT1 | BT2 |  BT3 |  BT4 |  BT5 |                   |      |       |       |      |       |       |
-// |  F1   |  F2 |  F3 |  F4  |  F5  |  F6  |                   |  F7  |  F8   |  F9   |  F10 |  F11  |  F12  |
-// |   `   |  !  |  @  |  #   |  $   |  %   |                   |  ^   |  &    |  *    |  (   |   )   |   ~   |
-// |       |     |     |      |      |      |        |  |       |      |  _    |  +    |  {   |   }   |  "|"  |
-//                     |      |      |      |        |  |       |      |       |       |
-            bindings = <
-&bt BT_CLR &bt BT_SEL 0     &bt BT_SEL 1      &bt BT_SEL 2      &bt BT_SEL 3 &bt BT_SEL 4                 &trans    &trans    &trans          &trans    &trans    &trans
-&kp F1     &kp F2           &kp F3            &kp F4            &kp F5       &kp F6                       &kp F7    &kp F8    &kp F9          &kp F10   &kp F11   &kp F12
-&kp GRAVE  &kp EXCL         &kp AT            &kp HASH          &kp DOLLAR   &kp PRCNT                    &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR  &kp RPAR  &kp TILDE
-&trans     &ext_power EP_ON &ext_power EP_OFF &ext_power EP_TOG &trans       &trans    &trans   &trans    &trans    &kp MINUS &kp KP_PLUS     &kp LBRC  &kp RBRC  &kp PIPE
-                                              &trans            &trans       &trans    &trans   &trans    &trans    &trans    &trans
-            >;
-        };
-
-        raise_layer {
-// ------------------------------------------------------------------------------------------------------------
-// |       |     |     |      |      |      |                   |      |       |       |      |       |       |
-// |   `   |  1  |  2  |  3   |  4   |  5   |                   |  6   |   7   |   8   |  9   |   0   |       |
-// |   F1  |  F2 |  F3 |  F4  |  F5  |  F6  |                   |      |   <-  |   v   |  ^   |  ->   |       |
-// |   F7  |  F8 |  F9 |  F10 |  F11 |  F12 |        |  |       |  +   |   -   |   =   |  [   |   ]   |   \   |
-//                     |      |      |      |        |  |       |      |       |       |
-            bindings = <
-&trans    &trans &trans &trans  &trans  &trans                       &trans      &trans    &trans    &trans   &trans    &trans
-&kp GRAVE &kp N1 &kp N2 &kp N3  &kp N4  &kp N5                       &kp N6      &kp N7    &kp N8    &kp N9   &kp N0    &trans
-&kp F1    &kp F2 &kp F3 &kp F4  &kp F5  &kp F6                       &trans      &kp LEFT  &kp DOWN  &kp UP   &kp RIGHT &trans
-&kp F7    &kp F8 &kp F9 &kp F10 &kp F11 &kp F12   &trans   &trans    &kp KP_PLUS &kp MINUS &kp EQUAL &kp LBKT &kp RBKT  &kp BSLH
-                        &trans  &trans  &trans    &trans   &trans    &trans      &trans    &trans
-            >;
-        };
     };
 };
 /* vim: set ft=c tw=174 sw=4 ts=4 et: */
