@@ -40,7 +40,7 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)
             compatible = "zmk,behavior-hold-tap";
             tapping-term-ms = <150>;
             quick-tap-ms = <100>;
-            flavor = "hold-preferred";
+            flavor = "balanced";
             #binding-cells = <2>;
             bindings = <&kp>, <&kp>;
             hold-trigger-key-positions = <KEYS_R THUMBS>;
@@ -50,7 +50,7 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)
             compatible = "zmk,behavior-hold-tap";
             tapping-term-ms = <150>;
             quick-tap-ms = <100>;
-            flavor = "hold-preferred";
+            flavor = "balanced";
             #binding-cells = <2>;
             bindings = <&kp>, <&kp>;
             hold-trigger-key-positions = <KEYS_L THUMBS>;
