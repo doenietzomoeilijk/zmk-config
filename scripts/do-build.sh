@@ -6,7 +6,7 @@ west update
 
 BOARD=lily58
 NOW=$(date +"%Y%m%d-%H%M%S")
-REV=$(git rev-parse --short HEAD)
+REV=$(git --git-dir=/zmk-config/.git rev-parse --short HEAD)
 OUTDIR="/zmk-config/firmware/${NOW}-${REV}"
 mkdir ${OUTDIR}
 
@@ -16,3 +16,5 @@ for side in left right; do
         -DSHIELD="${BOARD}_${side}"
     cp "/zmk/build/${BOARD}/${side}/zephyr/zmk.uf2" "${OUTDIR}/${BOARD}-${side}-${NOW}-${REV}.uf2"
 done
+
+chown -R 1000:100 "${OUTDIR}"
