@@ -39,6 +39,7 @@
 &lt {
     tapping-term-ms = <200>;
     flavor = "balanced";
+    quick-tap-ms = <100>;
 };
 &sl {
     release-after-ms = <2000>;
