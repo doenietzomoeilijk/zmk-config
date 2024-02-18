@@ -1,6 +1,7 @@
 #include <behaviors.dtsi>
-#include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/mouse.h>
 #include <dt-bindings/zmk/outputs.h>
 
 #define QWE 0
@@ -10,6 +11,9 @@
 #define SYM 4
 #define FUN 5
 #define ADJ 6
+
+#define SCR_DN K_SCROLL_DN
+#define SCR_UP K_SCROLL_UP
 
 /* Homerow mods, lifted from urob base.keymap */
 #include "zmk-nodefree-config/helper.h"
@@ -39,7 +43,7 @@
 &lt {
     tapping-term-ms = <200>;
     flavor = "balanced";
-    quick-tap-ms = <100>;
+    quick-tap-ms = <150>;
 };
 &sl {
     release-after-ms = <2000>;
@@ -81,6 +85,11 @@
             key-positions = <6 54 57>;
             bindings = <&bootloader>;
         };
+        combo_adjust {
+            timeout-ms = <50>;
+            key-positions = <52 53>;
+            bindings = <&mo ADJ>;
+        };
     };
 
     keymap {
@@ -93,32 +102,32 @@
         querty_layer {
             bindings = <
 //            |             |             |             |             |             |             |             |             |             |             |             |             |
-&kp ESC       &kp N1        &kp N2        &kp N3        &kp N4        &kp N5                                    &kp N6        &kp N7        &kp N8        &kp N9        &kp N0        &kp MINUS
-&kp TAB       &kp Q         &kp W         &kp E         &kp R         &kp T                                     &kp Y         &kp U         &kp I         &kp O         &kp P         &kp BSPC
-&caps_word    &hml LGUI A   &hml LALT S   &hml LCTRL D  &hml LSHFT F  &hml RALT G                               &hmr RALT H   &hmr RSHFT J  &hmr LCTRL K  &hmr LALT L   &hmr RGUI SEMI &kp SQT
-&kp GRAVE     &kp Z         &kp X         &kp C         &kp V         &kp B         &mo ADJ       &kp RBKT      &kp N         &kp M         &kp COMMA     &kp DOT       &kp FSLH      &kp BSLH
-                                          &none         &lt FUN TAB   &lt NAV BSPC  &lt NUM DEL   &lt NAV RET   &lt SYM SPACE &lt ADJ ESC   &none
+&none         &none         &none         &none         &none         &none                                     &none         &none         &none         &none         &none         &none
+&none         &kp Q         &kp W         &kp E         &kp R         &kp T                                     &kp Y         &kp U         &kp I         &kp O         &kp P         &none
+&none         &hml LGUI A   &hml LALT S   &hml LCTRL D  &hml LSHFT F  &hml RALT G                               &hmr RALT H   &hmr RSHFT J  &hmr LCTRL K  &hmr LALT L   &hmr RGUI SEMI &none
+&none         &kp Z         &kp X         &kp C         &kp V         &kp B         &none         &none         &kp N         &kp M         &kp COMMA     &kp DOT       &kp FSLH      &none
+                                          &none         &lt FUN TAB   &lt NAV BSPC  &lt NUM ESC   &lt NAV RET   &lt SYM SPACE &lt ADJ ESC   &none
             >;
         };
 
         colemak_layer {
             bindings = <
-//            |             |             |             |             |             |             |             |             |             |             |             |             |
-&kp ESC       &kp N1        &kp N2        &kp N3        &kp N4        &kp N5                                    &kp N6        &kp N7        &kp N8        &kp N9        &kp N0        &kp MINUS
-&kp TAB       &kp Q         &kp W         &kp E         &kp R         &kp T                                     &kp Y         &kp U         &kp I         &kp O         &kp P         &kp BSPC
-&caps_word    &hml LGUI A   &hml LALT S   &hml LCTRL D  &hml LSHFT F  &hml RALT G                               &hmr RALT H   &hmr RSHFT J  &hmr LCTRL K  &hmr LALT L   &hmr GUI SEMI &kp SQT
-&kp GRAVE     &kp Z         &kp X         &kp C         &kp V         &kp B         &mo ADJ       &kp RBKT      &kp N         &kp M         &kp COMMA     &kp DOT       &kp FSLH      &kp BSLH
-                                          &none         &lt FUN TAB   &lt NAV BSPC  &lt NUM DEL   &lt NAV RET   &lt SYM SPACE &lt ADJ ESC   &none
+//                         |             |             |             |             |             |             |             |             |             |             |             |
+&none         &none         &none         &none         &none         &none                                     &none         &none         &none         &none         &none         &none
+&none         &kp Q         &kp W         &kp E         &kp R         &kp T                                     &kp Y         &kp U         &kp I         &kp O         &kp P         &none
+&none         &hml LGUI A   &hml LALT S   &hml LCTRL D  &hml LSHFT F  &hml RALT G                               &hmr RALT H   &hmr RSHFT J  &hmr LCTRL K  &hmr LALT L   &hmr GUI SEMI &none
+&none         &kp Z         &kp X         &kp C         &kp V         &kp B         &none         &none         &kp N         &kp M         &kp COMMA     &kp DOT       &kp FSLH      &none
+                                          &none         &lt FUN TAB   &lt NAV BSPC  &lt NUM ESC   &lt NAV RET   &lt SYM SPACE &lt ADJ ESC   &none
             >;
         };
 
         nav_layer {
             bindings = <
 //            |             |             |             |             |             |             |             |             |             |             |             |             |
-&none         &none         &none         &none         &none         &none                                     &trans        &trans        &trans        &trans        &trans        &trans
-&none         &none         &kp C_MUTE    &kp C_VOL_DN  &kp C_VOL_UP  &none                                     &kp LA(LEFT)  &none         &none         &kp LA(RIGHT) &kp CAPS      &none
-&none         &kp LGUI      &kp LALT      &kp LCTRL     &kp LSHFT     &kp RALT                                  &kp LEFT      &kp DOWN      &kp UP        &kp RIGHT     &caps_word    &none
-&none         &none         &none         &none         &none         &none         &sl ADJ       &none         &kp HOME      &kp PG_DN     &kp PG_UP     &kp END       &kp PSCRN     &none
+&trans        &none         &none         &none         &none         &none                                     &trans        &trans        &trans        &trans        &trans        &trans
+&trans        &none         &kp C_MUTE    &kp C_VOL_DN  &kp C_VOL_UP  &none                                     &kp LA(LEFT)  &none         &none         &kp LA(RIGHT) &kp CAPS      &trans
+&trans        &kp LGUI      &kp LALT      &kp LCTRL     &kp LSHFT     &kp RALT                                  &kp LEFT      &kp DOWN      &kp UP        &kp RIGHT     &caps_word    &trans
+&trans        &none         &none         &none         &none         &none         &none         &none         &kp HOME      &kp PG_DN     &kp PG_UP     &kp END       &kp PSCRN     &trans
                                           &none         &kp TAB       &kp BSPC      &kp DEL       &none         &none         &none         &none
             >;
         };
@@ -127,10 +136,10 @@
             bindings = <
 //            |             |             |             |             |             |             |             |             |             |             |             |             |
 &trans        &trans        &trans        &trans        &trans        &trans                                    &trans        &trans        &trans        &trans        &trans        &trans
-&none         &none         &none         &none         &none         &none                                     &kp LBKT      &kp N7        &kp N8        &kp N9        &kp RBKT      &trans
-&none         &kp LGUI      &kp LALT      &kp LCTRL     &kp LSHFT     &kp RALT                                  &kp MINUS     &kp N4        &kp N5        &kp N6        &kp EQUAL     &none
-&none         &none         &none         &none         &none         &none         &sl ADJ       &none         &kp LT        &kp N1        &kp N2        &kp N3        &kp GT        &none
-                                          &none         &kp TAB       &kp BSPC      &kp DEL       &none         &kp N0        &kp DOT       &none
+&trans        &none         &none         &none         &none         &none                                     &kp LBKT      &kp N7        &kp N8        &kp N9        &kp RBKT      &trans
+&trans        &kp LGUI      &kp LALT      &kp LCTRL     &kp LSHFT     &kp RALT                                  &kp MINUS     &kp N4        &kp N5        &kp N6        &kp EQUAL     &trans
+&trans        &none         &none         &none         &none         &none         &none         &none         &kp LT        &kp N1        &kp N2        &kp N3        &kp GT        &trans
+                                          &none         &none         &none         &none         &kp DOT       &kp N0        &kp DOT       &none
             >;
         };
 
@@ -138,20 +147,20 @@
             bindings = <
 //            |             |             |             |             |             |             |             |             |             |             |             |             |
 &trans        &trans        &trans        &trans        &trans        &trans                                    &trans        &trans        &trans        &trans        &trans        &trans
-&none         &kp LT        &kp MINUS     &kp EQUAL     &kp GT        &none                                     &none         &none         &none         &none         &none         &none
-&none         &kp LBKT      &kp RBKT      &kp LPAR      &kp RPAR      &kp BSLH                                  &kp RALT      &kp RSHFT     &kp RCTRL     &kp LALT      &kp RGUI      &none
-&none         &kp LBRC      &kp RBRC      &kp GRAVE     &kp APOS      &none         &none         &none         &none         &none         &none         &none         &none         &none
-                                          &none         &none         &none         &none         &none         &none         &none         &none
+&trans        &kp LT        &kp MINUS     &kp EQUAL     &kp GT        &none                                     &none         &none         &none         &none         &none         &trans
+&trans        &kp LBKT      &kp RBKT      &kp LPAR      &kp RPAR      &kp BSLH                                  &kp RALT      &kp RSHFT     &kp RCTRL     &kp LALT      &kp RGUI      &trans
+&trans        &kp LBRC      &kp RBRC      &kp GRAVE     &kp APOS      &none         &none         &none         &none         &none         &none         &none         &none         &trans
+                                          &none         &none         &kp DEL       &none         &none         &none         &none         &none
             >;
         };
 
         fun_layer {
             bindings = <
 //            |             |             |             |             |             |             |             |             |             |             |             |             |
-&trans        &kp F1        &kp F2        &kp F3        &kp F4        &kp F5                                    &none         &kp F10       &kp F11       &kp F12       &none         &none
-&none         &none         &none         &none         &none         &none                                     &none         &kp F7        &kp F8        &kp F9        &kp F12       &none
-&none         &kp LGUI      &kp LALT      &kp LCTRL     &kp LSHFT     &kp RALT                                  &none         &kp F4        &kp F5        &kp F6        &kp F11       &none
-&none         &none         &none         &none         &none         &none         &sl ADJ       &none         &none         &kp F1        &kp F2        &kp F3        &kp F10       &none
+&trans        &kp F1        &kp F2        &kp F3        &kp F4        &kp F5                                    &none         &none         &none         &none         &none         &trans
+&trans        &none         &none         &none         &none         &none                                     &none         &kp F7        &kp F8        &kp F9        &kp F12       &trans
+&trans        &kp LGUI      &kp LALT      &kp LCTRL     &kp LSHFT     &kp RALT                                  &none         &kp F4        &kp F5        &kp F6        &kp F11       &trans
+&trans        &none         &none         &none         &none         &none         &sl ADJ       &none         &none         &kp F1        &kp F2        &kp F3        &kp F10       &trans
                                           &none         &none         &none         &none         &none         &none         &none         &none
             >;
         };
@@ -159,10 +168,10 @@
         adj_layer {
             bindings = <
 //            |             |             |             |             |             |             |             |             |             |             |             |             |
-&bt BT_CLR    &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                              &none         &none         &none         &none         &none         &none
-&none         &bt BT_DISC 0 &bt BT_DISC 1 &bt BT_DISC 2 &bt BT_DISC 3 &bt BT_DISC 4                             &none         &none         &none         &none         &none         &none
-&none         &none         &none         &none         &none         &none                                     &none         &none         &none         &none         &none         &none
-&none         &none         &none         &none         &out OUT_BLE  &out OUT_USB                              &none         &none         &none         &none         &none         &none
+&trans        &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                              &none         &none         &none         &none         &none         &trans
+&trans        &bt BT_DISC 0 &bt BT_DISC 1 &bt BT_DISC 2 &bt BT_DISC 3 &bt BT_DISC 4                             &none         &kp C_VOL_UP  &kp C_BRI_UP  &none         &none         &trans
+&trans        &none         &none         &none         &none         &none                                     &none         &kp C_VOL_DN  &kp C_BRI_DN  &none         &none         &trans
+&trans        &bt BT_CLR    &none         &none         &out OUT_BLE  &out OUT_USB                              &none         &kp C_MUTE    &none         &none         &none         &trans
                                           &none         &none         &none         &none         &none         &none         &none         &none
             >;
         };
