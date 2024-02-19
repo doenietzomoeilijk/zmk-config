@@ -147,9 +147,9 @@
             bindings = <
 //            |             |             |             |             |             |             |             |             |             |             |             |             |
 &trans        &trans        &trans        &trans        &trans        &trans                                    &trans        &trans        &trans        &trans        &trans        &trans
-&trans        &kp LT        &kp MINUS     &kp EQUAL     &kp GT        &none                                     &none         &none         &none         &none         &none         &trans
-&trans        &kp LBKT      &kp RBKT      &kp LPAR      &kp RPAR      &kp BSLH                                  &kp RALT      &kp RSHFT     &kp RCTRL     &kp LALT      &kp RGUI      &trans
-&trans        &kp LBRC      &kp RBRC      &kp GRAVE     &kp APOS      &none         &none         &none         &none         &none         &none         &none         &none         &trans
+&trans        &kp CAPS      &kp LBKT      &kp BSLH      &kp RBKT      &none                                     &none         &none         &none         &none         &none         &trans
+&trans        &caps_word    &kp LPAR      &kp APOS      &kp RPAR      &none                                     &kp RALT      &kp RSHFT     &kp RCTRL     &kp LALT      &kp RGUI      &trans
+&trans        &none         &kp LBRC      &kp GRAVE     &kp RBRC      &none         &none         &none         &none         &none         &none         &none         &none         &trans
                                           &none         &none         &kp DEL       &none         &none         &none         &none         &none
             >;
         };
