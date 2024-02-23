@@ -1,0 +1,29 @@
+combos {
+    compatible = "zmk,combos";
+    combo_bootl_l {
+        timeout-ms = <50>;
+        key-positions = <LT5 LH3 LH0>;
+        bindings = <&bootloader>;
+    };
+    combo_bootl_r {
+        timeout-ms = <50>;
+        key-positions = <RT5 RH0 RH3>;
+        bindings = <&bootloader>;
+    };
+    combo_adjust {
+        timeout-ms = <50>;
+        key-positions = <LH2 LH3>;
+        bindings = <&mo ADJ>;
+    };
+    combo_shift_capsword {
+        timeout-ms = <50>;
+        key-positions = <LB1 RB1>;
+        bindings = <&caps_word>;
+        layers = <QWE COL>;
+    };
+    combo_shift_colemak {
+        timeout-ms = <50>;
+        key-positions = <LH3 RH3>;
+        bindings = <&tog COL>;
+    };
+};
