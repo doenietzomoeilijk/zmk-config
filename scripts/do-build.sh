@@ -14,7 +14,7 @@ cd ${ZMKDIR}
 echo "Writing to logfile ${LOG}..."
 echo "**********************************************************************" >> $LOG
 echo "West init/update" >> $LOG
-west init -l app/ >> $LOG
+[ -d "$ZMKDIR/.west" ] || west init -l app/ >> $LOG
 west update >> $LOG
 
 echo "**********************************************************************" >> $LOG
