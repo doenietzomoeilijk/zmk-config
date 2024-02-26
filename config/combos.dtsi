@@ -35,11 +35,11 @@ combos {
         timeout-ms = <50>;
         key-positions = <LB1 RB1>;
         bindings = <&caps_word>;
-        layers = <QWE COL>;
+        layers = <QWE ENG>;
     };
     combo_shift_colemak {
         timeout-ms = <50>;
         key-positions = <LH3 RH3>;
-        bindings = <&tog COL>;
+        bindings = <&tog ENG>;
     };
 };

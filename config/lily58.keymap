@@ -5,7 +5,7 @@
 #include <dt-bindings/zmk/outputs.h>
 
 #define QWE 0
-#define COL 1
+#define ENG 1
 #define NAV 2
 #define NUM 3
 #define SYM 4
@@ -31,8 +31,6 @@
 #include "zmk-nodefree-config/keypos_def/keypos_58keys.h"
 #include "configuration.dtsi"
 
-
-
 / {
     #include "combos.dtsi"
     #include "behaviors.dtsi"
@@ -51,13 +49,13 @@
             >;
         };
 
-        colemak_layer {
+        engram_layer {
             bindings = <
 //                         |             |             |             |             |                     |             |             |             |             |             |             |
 &trans        &trans        &trans        &trans        &trans        &trans                                            &trans        &trans        &trans        &trans        &trans        &trans
-&trans        &kp Q         &kp W         &kp F         &kp P         &kp B                                             &kp J         &kp L         &kp U         &kp Y         &kp SEMI      &trans
-&trans        &hml LGUI A   &hml LALT R   &hmll LCTRL S &hmll LSHFT T &hml RALT G                                       &hmr RALT M   &hmrl RSHFT N &hmrl LCTRL E &hmr LALT I   &hmr GUI O    &trans
-&trans        &kp Z         &kp X         &kp C         &kp D         &kp V         &trans                &trans        &kp K         &kp H         &kp COMMA     &kp DOT       &kp FSLH      &trans
+&trans        &kp B         &hml RALT Y   &kp O         &kp U         &kp APOS                                          &kp SEMI      &kp L         &hmrl RALT D  &kp W         &kp V         &kp Z
+&trans        &hml LGUI C   &hml LALT I   &hmll LCTRL E &hmll LSHFT A &kp COMMA                                         &kp DOT       &hmrl RSHFT H &hmrl LCTRL T &hmr LALT S   &hmr GUI N    &kp Q
+&trans        &kp G         &kp X         &kp J         &kp K         &kp MINUS     &trans                &trans        &kp FSLH      &kp R         &kp M         &kp F         &kp P         &kp BSLH
                                           &trans        &trans        &trans        &trans                &trans        &trans        &trans        &trans
             >;
         };
@@ -101,7 +99,7 @@
 &none         &kp F1        &kp F2        &kp F3        &kp F4        &kp F5                                            &none         &none         &none         &none         &none         &none
 &none         &none         &none         &none         &none         &none                                             &none         &kp F7        &kp F8        &kp F9        &kp F12       &none
 &none         &kp LGUI      &kp LALT      &kp LCTRL     &kp LSHFT     &kp RALT                                          &none         &kp F4        &kp F5        &kp F6        &kp F11       &none
-&none         &none         &none         &none         &none         &none         &sl ADJ               &none         &none         &kp F1        &kp F2        &kp F3        &kp F10       &none
+&none         &none         &none         &none         &none         &none         &none                 &none         &none         &kp F1        &kp F2        &kp F3        &kp F10       &none
                                           &none         &none         &none         &none                 &none         &none         &none         &none
             >;
         };
@@ -112,8 +110,8 @@
 &none         &none         &none         &none         &none         &none                                             &none         &none         &none         &none         &none         &none
 &none         &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                                      &none         &kp C_VOL_UP  &kp C_BRI_UP  &none         &none         &none
 &none         &bt BT_DISC 0 &bt BT_DISC 1 &bt BT_DISC 2 &bt BT_DISC 3 &bt BT_DISC 4                                     &none         &kp C_VOL_DN  &kp C_BRI_DN  &none         &none         &none
-&none         &bt BT_CLR    &none         &none         &out OUT_BLE  &out OUT_USB  &tog COL              &none         &none         &kp C_MUTE    &none         &none         &none         &none
-                                          &none         &none         &none         &tog COL              &none         &none         &none         &none
+&none         &bt BT_CLR    &none         &none         &out OUT_BLE  &out OUT_USB  &none                 &none         &none         &kp C_MUTE    &none         &none         &none         &none
+                                          &none         &none         &none         &tog ENG              &none         &none         &none         &none
             >;
         };
     };
