@@ -17,11 +17,14 @@ echo "West init/update" >> $LOG
 [ -d "$ZMKDIR/.west" ] || west init -l app/ >> $LOG
 west update >> $LOG
 
+echo "" >> $LOG
 echo "**********************************************************************" >> $LOG
-echo "Builds..." >> $LOG
+echo "" >> $LOG
+echo "*** Builds... ***" >> $LOG
 
 for side in left right; do 
-    echo "\n${side} side\n" >> $LOG
+    echo "" >> $LOG
+    echo "*** ${side} side ***" >> $LOG
     echo "**********************************************************************" >> $LOG
     west build -b nice_nano_v2 \
         -s "${ZMKDIR}/app" \
@@ -30,6 +33,7 @@ for side in left right; do
         -DSHIELD="${BOARD}_${side}" >> $LOG
 
     cp "${ZMKDIR}/build/${BOARD}/${side}/zephyr/zmk.uf2" "${OUTDIR}/${BOARD}-${side}-${NOW}-${REV}.uf2"
+    echo "" >> $LOG
 done
 
 chown -R 1000:100 "${OUTDIR}"
