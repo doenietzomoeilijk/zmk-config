@@ -12,6 +12,13 @@
 #define FUN 5
 #define ADJ 6
 
+#define COMBO(NAME, BINDINGS, KEYPOS, LAYERS) \
+  combo_##NAME { \
+    bindings = <BINDINGS>; \
+    key-positions = <KEYPOS>; \
+    layers = <LAYERS>; \
+  };
+
 #define KEYS_L \
        0  1  2  3  4  5 \
       12 13 14 15 16 17 \
@@ -37,32 +44,13 @@
 / {
     combos {
         compatible = "zmk,combos";
-        combo_bootl_l {
-            timeout-ms = <50>;
-            key-positions = <0 50 53>;
-            bindings = <&bootloader>;
-        };
-        combo_bootl_r {
-            timeout-ms = <50>;
-            key-positions = <11 54 57>;
-            bindings = <&bootloader>;
-        };
-        combo_adjust {
-            timeout-ms = <50>;
-            key-positions = <51 52>;
-            bindings = <&mo ADJ>;
-        };
-        combo_shift_capsword {
-            timeout-ms = <50>;
-            key-positions = <28 31>;
-            bindings = <&caps_word>;
-            layers = <QWE ENG>;
-        };
-        combo_shift_colemak {
-            timeout-ms = <50>;
-            key-positions = <50 57>;
-            bindings = <&tog ENG>;
-        };
+
+        COMBO(bootl_l,        &bootloader, 0 50 53,  QWE)
+        COMBO(bootl_r,        &bootloader, 11 54 57, QWE)
+        COMBO(adjust,         &mo ADJ,     51 52,    QWE ENG)
+        COMBO(shift_capsword, &caps_word,  28 31,    QWE ENG)
+        COMBO(we_escape,      &kp ESC,     14 15,    QWE ENG)
+        COMBO(er_tab,         &kp TAB,     15 16,    QWE ENG)
     };
 
     behaviors {
