@@ -50,11 +50,12 @@
 
         COMBO(bootl_l,        &bootloader, 0 50 53,  QWE,     200, 200)
         COMBO(bootl_r,        &bootloader, 11 54 57, QWE,     200, 200)
-        COMBO(adjust,         &mo ADJ,     51 52,    QWE ENG, 100, 200)
+        COMBO(adjust,         &mo ADJ,     51 52,    QWE ENG, 50,  200)
         COMBO(shift_capsword, &caps_word,  28 31,    QWE ENG, 50,  300)
-        COMBO(er_tab,         &kp TAB,     15 16,    QWE ENG, 50,  300)
-        COMBO(qr_grave,       &kp GRAVE,   13 16,    QWE ENG, 50,  300)
-        COMBO(af_grave,       &kp GRAVE,   25 28,    QWE ENG, 50,  300)
+        COMBO(er_tab,         &kp TAB,     15 16,    QWE ENG, 40,  500)
+        COMBO(qr_grave,       &kp GRAVE,   13 16,    QWE ENG, 50,  400)
+        COMBO(wr_esc,         &kp ESC,     14 16,    QWE ENG, 40,  400)
+        COMBO(af_grave,       &kp GRAVE,   25 28,    QWE ENG, 50,  400)
         COMBO(up_bslh,        &kp BSLH,    19 22,    QWE ENG, 50,  300)
         COMBO(jsemi_apos,     &kp APOS,    31 34,    QWE ENG, 50,  300)
     };
@@ -168,8 +169,8 @@
             bindings = <
 //            |             |             |             |             |             |                     |             |             |             |             |             |             |
 &none         &none         &none         &none         &none         &none                                             &none         &none         &none         &none         &none         &none
-&none         &kp CAPS      &kp APOS      &kp LBKT      &kp RBKT      &none                                             &none         &none         &none         &none         &none         &none
-&none         &caps_word    &kp GRAVE     &kp LPAR      &kp RPAR      &none                                             &kp RALT      &kp RSHFT     &kp RCTRL     &kp LALT      &kp RGUI      &none
+&none         &kp CAPS      &kp GRAVE     &kp LBKT      &kp RBKT      &none                                             &none         &none         &none         &none         &none         &none
+&none         &caps_word    &kp APOS      &kp LPAR      &kp RPAR      &none                                             &kp RALT      &kp RSHFT     &kp RCTRL     &kp LALT      &kp RGUI      &none
 &none         &none         &kp BSLH      &kp LBRC      &kp RBRC      &none         &none                 &none         &none         &none         &none         &none         &none         &none
                                           &none         &none         &kp DEL       &none                 &none         &none         &none         &none
             >;
