@@ -52,7 +52,7 @@
         COMBO(bootl_r,        &bootloader, 11 54 57, QWE,     200, 200)
         COMBO(adjust,         &mo ADJ,     51 52,    QWE ENG, 50,  200)
         COMBO(shift_capsword, &caps_word,  28 31,    QWE ENG, 50,  300)
-        COMBO(er_tab,         &kp TAB,     15 16,    QWE ENG, 40,  500)
+        COMBO(er_tab,         &kp TAB,     15 16,    QWE ENG, 40,  400)
         COMBO(qr_grave,       &kp GRAVE,   13 16,    QWE ENG, 50,  400)
         COMBO(wr_esc,         &kp ESC,     14 16,    QWE ENG, 40,  400)
         COMBO(af_grave,       &kp GRAVE,   25 28,    QWE ENG, 50,  400)
