@@ -48,16 +48,16 @@
     combos {
         compatible = "zmk,combos";
 
-        COMBO(bootl_l,        &bootloader, 0 50 53,  QWE,     200, 200)
-        COMBO(bootl_r,        &bootloader, 11 54 57, QWE,     200, 200)
-        COMBO(adjust,         &mo ADJ,     51 52,    QWE ENG, 50,  200)
-        COMBO(shift_capsword, &caps_word,  28 31,    QWE ENG, 50,  300)
-        COMBO(er_tab,         &kp TAB,     15 16,    QWE ENG, 40,  400)
-        COMBO(qr_grave,       &kp GRAVE,   13 16,    QWE ENG, 50,  400)
-        COMBO(wr_esc,         &kp ESC,     14 16,    QWE ENG, 40,  400)
-        COMBO(af_grave,       &kp GRAVE,   25 28,    QWE ENG, 50,  400)
-        COMBO(up_bslh,        &kp BSLH,    19 22,    QWE ENG, 50,  300)
-        COMBO(jsemi_apos,     &kp APOS,    31 34,    QWE ENG, 50,  300)
+        COMBO(bootl_l,        &bootloader, 0 50 53,  QWE, 200, 200)
+        COMBO(bootl_r,        &bootloader, 11 54 57, QWE, 200, 200)
+        COMBO(adjust,         &mo ADJ,     51 52,    QWE, 50,  200)
+        COMBO(shift_capsword, &caps_word,  28 31,    QWE, 50,  300)
+        COMBO(er_tab,         &kp TAB,     15 16,    QWE, 40,  400)
+        COMBO(qr_grave,       &kp GRAVE,   13 16,    QWE, 50,  400)
+        COMBO(wr_esc,         &kp ESC,     14 16,    QWE, 40,  400)
+        COMBO(af_grave,       &kp GRAVE,   25 28,    QWE, 50,  400)
+        COMBO(up_bslh,        &kp BSLH,    19 22,    QWE, 50,  300)
+        COMBO(jsemi_apos,     &kp APOS,    31 34,    QWE, 50,  300)
     };
 
     behaviors {
@@ -132,14 +132,14 @@
             >;
         };
 
-        engram_layer {
+        normie_layer {
             bindings = <
-//                         |             |             |             |             |                     |             |             |             |             |             |             |
-&trans        &trans        &trans        &trans        &trans        &trans                                            &trans        &trans        &trans        &trans        &trans        &trans
-&trans        &kp B         &hml RALT Y   &kp O         &kp U         &kp APOS                                          &kp SEMI      &kp L         &kp D         &hmr RALT W   &kp V         &kp Z
-&trans        &hml LGUI C   &hml LALT I   &hml LCTRL E  &hmll LSHFT A &kp COMMA                                         &kp DOT       &hmrl RSHFT H &hmr LCTRL  T &hmr LALT S   &hmr RGUI N   &kp Q
-&trans        &kp G         &kp X         &kp J         &kp K         &kp MINUS     &trans                &trans        &kp FSLH      &kp R         &kp M         &kp F         &kp P         &kp BSLH
-                                          &trans        &trans        &trans        &trans                &trans        &trans        &trans        &trans
+//            |             |             |             |             |             |                     |             |             |             |             |             |             |
+&kp ESC       &kp N1        &kp N2        &kp N3        &kp N4        &kp N5                                            &kp N6        &kp N7        &kp N8        &kp N9        &kp N0        &kp GRAVE
+&kp TAB       &kp Q         &kp W         &kp E         &kp R         &kp T                                             &kp Y         &kp U         &kp I         &kp O         &kp P         &kp MINUS
+&kp LCTRL     &kp A         &kp S         &kp D         &kp F         &kp G                                             &kp H         &kp J         &kp K         &kp L         &kp SEMI      &kp SQT
+&kp LSHFT     &kp Z         &kp X         &kp C         &kp V         &kp B         &kp LBKT              &kp RBKT      &kp N         &kp M         &kp COMMA     &kp DOT       &kp FSLH      &kp RSHFT
+                                          &kp LALT      &kp LGUI      &mo FUN       &kp SPACE             &kp RET       &mo NAV       &kp BSPC      &kp RGUI
             >;
         };
 
