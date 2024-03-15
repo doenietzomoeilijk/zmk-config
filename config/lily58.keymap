@@ -50,16 +50,22 @@
 
         COMBO(bootl_l,        &bootloader, 0 50 53,  QWE, 200, 200)
         COMBO(bootl_r,        &bootloader, 11 54 57, QWE, 200, 200)
+
         COMBO(lthum_adjust,   &mo ADJ,     51 52,    QWE, 50,  200)
         COMBO(rthum_adjust,   &mo ADJ,     54 55,    QWE, 50,  200)
         COMBO(lthumb_ltfun,   &mo FUN,     52 53,    QWE, 50,  200)
+
         COMBO(shift_capsword, &caps_word,  28 31,    QWE, 50,  300)
+
         COMBO(er_tab,         &kp TAB,     15 16,    QWE, 40,  400)
         COMBO(qr_grave,       &kp GRAVE,   13 16,    QWE, 50,  400)
-        COMBO(wr_esc,         &kp ESC,     14 16,    QWE, 40,  400)
+        COMBO(wr_esc,         &kp ESC,     14 16,    QWE, 40,  300)
         COMBO(af_grave,       &kp GRAVE,   25 28,    QWE, 50,  400)
+        COMBO(sf_grave,       &kp GRAVE,   26 28,    QWE, 50,  300)
+
         COMBO(up_bslh,        &kp BSLH,    19 22,    QWE, 50,  300)
         COMBO(jsemi_apos,     &kp APOS,    31 34,    QWE, 50,  300)
+        COMBO(jl_apos,        &kp APOS,    31 33,    QWE, 50,  200)
     };
 
     behaviors {
