@@ -50,7 +50,9 @@
 
         COMBO(bootl_l,        &bootloader, 0 50 53,  QWE, 200, 200)
         COMBO(bootl_r,        &bootloader, 11 54 57, QWE, 200, 200)
-        COMBO(adjust,         &mo ADJ,     51 52,    QWE, 50,  200)
+        COMBO(lthum_adjust,   &mo ADJ,     51 52,    QWE, 50,  200)
+        COMBO(rthum_adjust,   &mo ADJ,     54 55,    QWE, 50,  200)
+        COMBO(lthumb_ltfun,   &mo FUN,     52 53,    QWE, 50,  200)
         COMBO(shift_capsword, &caps_word,  28 31,    QWE, 50,  300)
         COMBO(er_tab,         &kp TAB,     15 16,    QWE, 40,  400)
         COMBO(qr_grave,       &kp GRAVE,   13 16,    QWE, 50,  400)
@@ -126,8 +128,8 @@
 //            |             |             |             |             |             |                     |             |             |             |             |             |             |
 &none         &none         &none         &none         &none         &none                                             &none         &none         &none         &none         &none         &none
 &none         &kp Q         &kp W         &kp E         &kp R         &kp T                                             &kp Y         &kp U         &kp I         &kp O         &kp P         &none
-&none         &hml LGUI A   &hml LALT S   &hml LCTRL D  &hmll LSHFT F &hml RALT G                                       &hmr RALT H   &hmr RSHFT J  &hmr LCTRL K  &hmr LALT L   &hmr RGUI SEMI &kp APOS
-&kp GRAVE     &kp Z         &kp X         &kp C         &kp V         &kp B         &none                 &none         &kp N         &kp M         &kp COMMA     &kp DOT       &kp FSLH      &kp BSLH
+&none         &hml LGUI A   &hml LALT S   &hml LCTRL D  &hmll LSHFT F &hml RALT G                                       &hmr RALT H   &hmr RSHFT J  &hmr LCTRL K  &hmr LALT L   &hmr RGUI SEMI &none
+&none         &kp Z         &kp X         &kp C         &kp V         &kp B         &none                 &none         &kp N         &kp M         &kp COMMA     &kp DOT       &kp FSLH      &none
                                           &none         &lt FUN TAB   &lth NAV BSPC &lth NUM ESC          &lt NAV RET   &lt SYM SPACE &lt ADJ ESC   &none
             >;
         };
