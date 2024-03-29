@@ -48,28 +48,25 @@
     combos {
         compatible = "zmk,combos";
 
-        // COMBO(bootl_l,        &bootloader, 0 50 53,  QWE, 200, 200)
-        // COMBO(bootl_r,        &bootloader, 11 54 57, QWE, 200, 200)
-
         COMBO(lthum_adjust,   &mo ADJ,     51 52,    QWE, 50,  200)
         COMBO(rthum_adjust,   &mo ADJ,     54 55,    QWE, 50,  200)
         COMBO(lthumb_ltfun,   &mo FUN,     52 53,    QWE, 50,  200)
 
         COMBO(shift_capsword, &caps_word,  28 31,    QWE, 50,  300)
 
-        COMBO(er_tab,         &kp TAB,     15 16,    QWE, 40,  400)
-        COMBO(qr_grave,       &kp GRAVE,   13 16,    QWE, 50,  400)
-        COMBO(wr_esc,         &kp ESC,     14 16,    QWE, 40,  300)
-        COMBO(af_grave,       &kp GRAVE,   25 28,    QWE, 50,  400)
-        COMBO(sf_grave,       &kp GRAVE,   26 28,    QWE, 50,  300)
+        COMBO(er_tab,         &kp TAB,     15 16,    QWE, 15,  200)
+        COMBO(qr_grave,       &kp GRAVE,   13 16,    QWE, 30,  400)
+        COMBO(wr_esc,         &kp ESC,     14 16,    QWE, 30,  200)
+        COMBO(af_grave,       &kp GRAVE,   25 28,    QWE, 30,  200)
+        COMBO(sf_grave,       &kp GRAVE,   26 28,    QWE, 30,  200)
 
         COMBO(uo_bslh,        &kp BSLH,    19 21,    QWE, 50,  300)
         COMBO(up_bslh,        &kp BSLH,    19 22,    QWE, 50,  300)
         COMBO(jsemi_apos,     &kp APOS,    31 34,    QWE, 50,  300)
         COMBO(jl_apos,        &kp APOS,    31 33,    QWE, 50,  200)
 
-        // Bit of a cheat because I apparently cannot type.
-        COMBO(fslsh_qmark,    &kp QMARK,   28 48,    QWE, 50,  0)
+        COMBO(bootl_l,        &bootloader, 13 17 53, QWE, 200, 500)
+        COMBO(bootl_r,        &bootloader, 18 22 54, QWE, 200, 500)
     };
 
     behaviors {
@@ -116,7 +113,7 @@
 &none         &kp Q         &kp W         &kp E         &kp R         &kp T                                             &kp Y         &kp U         &kp I         &kp O         &kp P         &none
 &none         &hml LGUI A   &hml LALT S   &hml LCTRL D  &hml LSHFT F  &hml RALT G                                       &hmr RALT H   &hmr RSHFT J  &hmr LCTRL K  &hmr LALT L   &hmr RGUI SEMI &none
 &none         &kp Z         &kp X         &kp C         &kp V         &kp B         &none                 &none         &kp N         &kp M         &kp COMMA     &kp DOT       &kp FSLH      &none
-                                          &none         &lt FUN TAB   &lth NAV BSPC &lth NUM ESC          &lt NAV RET   &lt SYM SPACE &lt ADJ ESC   &none
+                                          &none         &lt FUN TAB   &lth NAV BSPC &lth NUM DEL          &lt NAV RET   &lt SYM SPACE &lt ADJ ESC   &none
             >;
         };
 
