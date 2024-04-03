@@ -123,7 +123,7 @@
 &none         &kp Q         &kp W         &kp E         &kp R         &kp T                                             &kp Y         &kp U         &kp I         &kp O         &kp P         &none
 &none         &hml LGUI A   &hml LALT S   &hml LCTRL D  &hml LSHFT F  &hml RALT G                                       &hmr RALT H   &hmr RSHFT J  &hmr LCTRL K  &hmr LALT L   &hmr RGUI SEMI &none
 &none         &kp Z         &kp X         &kp C         &kp V         &kp B         &none                 &none         &kp N         &kp M         &kp COMMA     &kp DOT       &kp FSLH      &none
-                                          &none         &none         &lth NUM BSPC &lthl LSHFT SPACE     &lt NAV RET   &lt SYM SPACE &none         &none
+                                          &none         &none        &lthl LSHFT SPACE &lth NUM DEL       &lt NAV RET   &lt SYM BSPC  &none         &none
             >;
         };
 
