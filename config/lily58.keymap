@@ -48,26 +48,23 @@
     combos {
         compatible = "zmk,combos";
 
-        // COMBO(lthum_adjust,   wmo ADJ,     51 52,    QWE, 50,  200)
-        COMBO(rthum_adjust,   &mo ADJ,     54 55,    QWE, 50,  200)
-        COMBO(lthumb_ltfun,   &mo FUN,     52 53,    QWE, 50,  200)
+        COMBO(lthumb_ltfun,   &mo FUN,     52 53,    QWE,     50,  200)
+        COMBO(rthum_adjust,   &mo ADJ,     54 55,    QWE,     50,  200)
 
-        COMBO(shift_capsword, &caps_word,  28 31,    QWE, 50,  300)
+        COMBO(shift_capsword, &caps_word,  28 31,    QWE,     50,  350)
 
-        COMBO(er_tab,         &kp TAB,     15 16,    QWE, 15,  200)
-        COMBO(qr_grave,       &kp GRAVE,   13 16,    QWE, 30,  400)
-        COMBO(wr_esc,         &kp ESC,     14 16,    QWE, 30,  200)
-        COMBO(qe_esc,         &kp ESC,     13 15,    QWE, 30,  200)
-        COMBO(ad_grave,       &kp GRAVE,   25 27,    QWE, 30,  200)
-        COMBO(sf_grave,       &kp GRAVE,   26 28,    QWE, 30,  200)
+        COMBO(er_tab,         &kp TAB,     15 16,    QWE,     15,  200)
+        COMBO(wr_esc,         &kp ESC,     14 16,    QWE,     30,  200)
+        COMBO(ad_grave,       &kp GRAVE,   25 27,    QWE,     30,  200)
+        COMBO(sf_grave,       &kp GRAVE,   26 28,    QWE,     30,  200)
 
-        COMBO(uo_bslh,        &kp BSLH,    19 21,    QWE, 50,  300)
-        COMBO(up_bslh,        &kp BSLH,    19 22,    QWE, 50,  300)
-        COMBO(jsemi_apos,     &kp APOS,    31 34,    QWE, 50,  300)
-        COMBO(jl_apos,        &kp APOS,    31 33,    QWE, 50,  200)
+        COMBO(uo_bslh,        &kp BSLH,    19 21,    QWE,     50,  300)
+        COMBO(jl_apos,        &kp APOS,    31 33,    QWE,     50,  200)
 
-        COMBO(bootl_l,        &bootloader, 13 17 53, QWE, 200, 500)
-        COMBO(bootl_r,        &bootloader, 18 22 54, QWE, 200, 500)
+        COMBO(coldot_enter,   &kp RET,     46 47,    QWE NUM, 50,  200)
+        COMBO(mcol_dash,      &kp MINUS,   45 46,    QWE,     50,  200)
+        COMBO(bootl_l,        &bootloader, 13 17 53, QWE,     200, 500)
+        COMBO(bootl_r,        &bootloader, 18 22 54, QWE,     200, 500)
     };
 
     behaviors {
