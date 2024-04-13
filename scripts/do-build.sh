@@ -26,7 +26,7 @@ for side in left right; do
     echo "" >> $LOG
     echo "*** ${side} side ***" >> $LOG
     echo "**********************************************************************" >> $LOG
-    west build -b nice_nano_v2 \
+    west build --pristine -b nice_nano_v2 \
         -s "${ZMKDIR}/app" \
         -d "build/${BOARD}/${side}" -- \
         -DZMK_CONFIG=/zmk-config/config \
