@@ -26,13 +26,19 @@ for side in left right; do
     echo "" >> $LOG
     echo "*** ${side} side ***" >> $LOG
     echo "**********************************************************************" >> $LOG
-    west build --pristine -b nice_nano_v2 \
+
+    pristine=""
+    if [[ $side == "left" ]]; then pristine="--pristine"; else pristine=""; fi
+    pristine="--pristine"
+
+    west build ${pristine} -b nice_nano_v2 \
         -s "${ZMKDIR}/app" \
         -d "build/${BOARD}/${side}" -- \
         -DZMK_CONFIG=/zmk-config/config \
-        -DSHIELD="${BOARD}_${side}" >> $LOG
+        -DSHIELD="${BOARD}_${side}" >> $LOG 2>&1
 
-    cp "${ZMKDIR}/build/${BOARD}/${side}/zephyr/zmk.uf2" "${OUTDIR}/${BOARD}-${side}-${NOW}-${REV}.uf2"
+    outfile="${ZMKDIR}/build/${BOARD}/${side}/zephyr/zmk.uf2" 
+    [[ -f "${outfile}" ]] && cp "${outfile}" "${OUTDIR}/${BOARD}-${side}-${NOW}-${REV}.uf2"
     echo "" >> $LOG
 done
 

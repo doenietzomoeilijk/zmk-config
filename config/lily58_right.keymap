@@ -1,0 +1,6 @@
+#include <dt-bindings/zmk/matrix_transform.h>
+#include "lily58.keymap"
+
+&default_transform {
+    col-offset = <6>;
+};
