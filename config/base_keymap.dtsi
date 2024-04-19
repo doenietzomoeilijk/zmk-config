@@ -5,12 +5,11 @@
 #include <dt-bindings/zmk/outputs.h>
 
 #define QWE 0
-#define ENG 1
-#define NAV 2
-#define NUM 3
-#define SYM 4
-#define FUN 5
-#define ADJ 6
+#define NAV 1
+#define NUM 2
+#define SYM 3
+#define FUN 4
+#define ADJ 5
 
 #define COMBO(NAME, BINDINGS, KEYPOS, LAYERS, TERM, QUICKTAP, ...) \
   combo_##NAME { \
@@ -23,14 +22,14 @@
   };
 
 #define KEYS_L \
-       0  1  2  3  4 \
-      12 13 14 15 16 \
-      24 25 26 27 28
+          0  1  2  3  4 \
+         12 13 14 15 16 \
+         24 25 26 27 28
 #define KEYS_R \
                                5  6  7  8  9 \
                               18 19 20 21 22 \
                               29 30 31 32 33
-#define THUMBS 34 35 36 37
+#define THUMBS    34 35       36 37
 
 &lt {
     tapping-term-ms = <300>;
@@ -117,76 +116,60 @@
             >;
         };
 
-        normie_layer {
-            bindings = <
-//            |             |             |             |             |             |                     |             |             |             |             |             |             |
-&kp ESC       &kp N1        &kp N2        &kp N3        &kp N4        &kp N5                                            &kp N6        &kp N7        &kp N8        &kp N9        &kp N0        &kp GRAVE
-&kp TAB       &kp Q         &kp W         &kp E         &kp R         &kp T                                             &kp Y         &kp U         &kp I         &kp O         &kp P         &kp MINUS
-&kp LCTRL     &kp A         &kp S         &kp D         &kp F         &kp G                                             &kp H         &kp J         &kp K         &kp L         &kp SEMI      &kp SQT
-&kp LSHFT     &kp Z         &kp X         &kp C         &kp V         &kp B         &kp LBKT              &kp RBKT      &kp N         &kp M         &kp COMMA     &kp DOT       &kp FSLH      &kp RSHFT
-                                          &kp LALT      &kp LGUI      &mo FUN       &kp SPACE             &kp RET       &mo NAV       &kp BSPC      &kp RGUI
-            >;
-        };
-
         nav_layer {
             bindings = <
-//            |             |             |             |             |             |                     |             |             |             |             |             |             |
-&none         &none         &none         &none         &none         &none                                             &none         &none         &none         &none         &none         &none
-&none         &none         &none         &none         &none         &none                                             &kp LA(LEFT)  &none         &none         &kp LA(RIGHT) &kp CAPS      &none
-&none         &kp LGUI      &kp LALT      &kp LCTRL     &kp LSHFT     &kp RALT                                          &kp LEFT      &kp DOWN      &kp UP        &kp RIGHT     &caps_word    &none
-&none         &none         &none         &none         &none         &none         &none                 &none         &kp HOME      &kp PG_DN     &kp PG_UP     &kp END       &kp PSCRN     &none
-                                          &none         &none         &none         &none                 &none         &none         &none         &none
+//            |             |             |             |             |             |                     |             |             |             |             |             
+&none         &none         &none         &none         &none                                             &kp LA(LEFT)  &none         &none         &kp LA(RIGHT) &kp CAPS      
+&kp LGUI      &kp LALT      &kp LCTRL     &kp LSHFT     &kp RALT                                          &kp LEFT      &kp DOWN      &kp UP        &kp RIGHT     &caps_word    
+&none         &none         &none         &none         &none                                             &kp HOME      &kp PG_DN     &kp PG_UP     &kp END       &kp PSCRN     
+                                                        &none         &none                 &none         &none
             >;
         };
 
         numbers_layer {
             bindings = <
-//            |             |             |             |             |             |                     |             |             |             |             |             |             |
-&none         &none         &none         &none         &none         &none                                             &none         &none         &none         &none         &none         &none
-&none         &none         &none         &none         &none         &none                                             &kp GRAVE     &kp N7        &kp N8        &kp N9        &kp BSLH      &none
-&none         &kp LGUI      &kp LALT      &kp LCTRL     &kp LSHFT     &kp RALT                                          &kp MINUS     &kp N4        &kp N5        &kp N6        &kp EQUAL     &none
-&none         &none         &none         &none         &none         &none         &none                 &none         &kp COMMA     &kp N1        &kp N2        &kp N3        &kp DOT       &none
-                                          &none         &none         &none         &none                 &kp BSPC      &kp N0        &none         &none
+//            |             |             |             |             |             |                     |             |             |             |             |             
+&none         &none         &none         &none         &none                                             &kp GRAVE     &kp N7        &kp N8        &kp N9        &kp BSLH      
+&kp LGUI      &kp LALT      &kp LCTRL     &kp LSHFT     &kp RALT                                          &kp MINUS     &kp N4        &kp N5        &kp N6        &kp EQUAL     
+&none         &none         &none         &none         &none                                             &kp COMMA     &kp N1        &kp N2        &kp N3        &kp DOT       
+                                                        &none         &none                 &kp BSPC      &kp N0
             >;
         };
 
         symbol_layer {
             bindings = <
-//            |             |             |             |             |             |                     |             |             |             |             |             |             |
-&none         &none         &none         &none         &none         &none                                             &none         &none         &none         &none         &none         &none
-&none         &kp CAPS      &kp GRAVE     &kp LBKT      &kp RBKT      &none                                             &none         &none         &none         &none         &none         &none
-&none         &caps_word    &kp APOS      &kp LPAR      &kp RPAR      &none                                             &kp RALT      &kp RSHFT     &kp RCTRL     &kp LALT      &kp RGUI      &none
-&none         &none         &kp BSLH      &kp LBRC      &kp RBRC      &none         &none                 &none         &none         &none         &none         &none         &none         &none
-                                          &none         &none         &kp DEL       &none                 &none         &none         &none         &none
+//            |             |             |             |             |             |                     |             |             |             |             |             
+&kp CAPS      &kp GRAVE     &kp LBKT      &kp RBKT      &none                                             &none         &none         &none         &none         &none         
+&caps_word    &kp APOS      &kp LPAR      &kp RPAR      &none                                             &kp RALT      &kp RSHFT     &kp RCTRL     &kp LALT      &kp RGUI      
+&none         &kp BSLH      &kp LBRC      &kp RBRC      &none                                             &none         &none         &none         &none         &none         
+                                                        &kp DEL       &none                 &none         &none
             >;
         };
 
         function_layer {
             bindings = <
-//            |             |             |             |             |             |                     |             |             |             |             |             |             |
-&none         &none         &none         &none         &none         &none                                             &none         &none         &none         &none         &none         &none
-&none         &kp F1        &kp F2        &kp F3        &kp F4        &kp F5                                            &none         &kp F7        &kp F8        &kp F9        &kp F12       &none
-&none         &kp LGUI      &kp LALT      &kp LCTRL     &kp LSHFT     &kp RALT                                          &none         &kp F4        &kp F5        &kp F6        &kp F11       &none
-&none         &none         &none         &none         &none         &none         &none                 &none         &none         &kp F1        &kp F2        &kp F3        &kp F10       &none
-                                          &none         &none         &none         &none                 &none         &none         &none         &none
+//            |             |             |             |             |             |                     |             |             |             |             |             
+&kp F1        &kp F2        &kp F3        &kp F4        &kp F5                                            &none         &kp F7        &kp F8        &kp F9        &kp F12       
+&kp LGUI      &kp LALT      &kp LCTRL     &kp LSHFT     &kp RALT                                          &none         &kp F4        &kp F5        &kp F6        &kp F11       
+&none         &none         &none         &none         &none                                             &none         &kp F1        &kp F2        &kp F3        &kp F10       
+                                                        &none         &none                 &none         &none
             >;
         };
 
         adjust_layer {
             bindings = <
-//            |             |             |             |             |             |                     |             |             |             |             |             |             |
-&none         &none         &none         &none         &none         &none                                             &none         &none         &none         &none         &none         &none
-&none         &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                                      &none         &kp C_VOL_UP  &kp C_BRI_UP  &none         &none         &none
-&none         &bt BT_DISC 0 &bt BT_DISC 1 &bt BT_DISC 2 &bt BT_DISC 3 &bt BT_DISC 4                                     &none         &kp C_VOL_DN  &kp C_BRI_DN  &none         &none         &none
-&none         &bt BT_CLR    &none         &none         &out OUT_USB  &out OUT_BLE  &none                 &none         &none         &kp C_MUTE    &none         &none         &none         &none
-                                          &none         &none         &none         &tog ENG              &none         &none         &none         &none
+//            |             |             |             |             |             |                     |             |             |             |             |             
+&bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                                      &none         &kp C_VOL_UP  &kp C_BRI_UP  &none         &none         
+&bt BT_DISC 0 &bt BT_DISC 1 &bt BT_DISC 2 &bt BT_DISC 3 &bt BT_DISC 4                                     &none         &kp C_VOL_DN  &kp C_BRI_DN  &none         &none         
+&bt BT_CLR    &none         &none         &out OUT_USB  &out OUT_BLE                                      &none         &kp C_MUTE    &none         &none         &none         
+                                                        &none         &none                 &none         &none
             >;
         };
     };
 };
-// //            |             |             |             |             |             |                     |             |             |             |             |             |             |
-// &none         &kp LGUI      &kp LALT      &kp LCTRL     &kp LSHFT     &kp RALT                                          &kp RALT      &kp RSHFT     &kp RCTRL     &kp LALT      &kp RGUI      &none
-// &trans        &trans        &trans        &trans        &trans        &trans                                            &trans        &trans        &trans        &trans        &trans        &trans
-// &none         &none         &none         &none         &none         &none                                             &none         &none         &none         &none         &none         &none
-//                                           &none         &none         &none         &none                 &none         &none         &none         &none
+// |             |             |             |             |             |                     |             |             |             |             |             |          
+// &kp LGUI      &kp LALT      &kp LCTRL     &kp LSHFT     &kp RALT                                          &kp RALT      &kp RSHFT     &kp RCTRL     &kp LALT      &kp RGUI   
+// &trans        &trans        &trans        &trans        &trans                                            &trans        &trans        &trans        &trans        &trans     
+// &none         &none         &none         &none         &none                                             &none         &none         &none         &none         &none      
+//                                                         &none         &none                 &none         &none
 /* vim: set ft=c tw=174 sw=4 ts=4 et: */
