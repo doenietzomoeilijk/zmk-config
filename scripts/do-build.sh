@@ -1,7 +1,5 @@
 #!/bin/bash
 
-BOARDS=lily58 cradio
-BOARD=lily58
 NOW=$(date +"%Y%m%d-%H%M%S")
 REV=$(git --git-dir=/zmk-config/.git rev-parse --short HEAD)
 OUTDIR="/zmk-config/firmware/${NOW}-${REV}"
