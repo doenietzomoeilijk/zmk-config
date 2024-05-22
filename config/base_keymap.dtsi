@@ -40,6 +40,10 @@
 &sl {
     release-after-ms = <2000>;
 };
+&sk {
+    release-after-ms = <2000>;
+    quick-release;
+};
 
 / {
     combos {
@@ -79,6 +83,15 @@
             #binding-cells = <2>;
             bindings = <&kp>, <&kp>;
         };
+        lths: layer_tap_hold_sticky {
+            compatible = "zmk,behavior-hold-tap";
+            tapping-term-ms = <300>;
+            flavor = "tap-preferred";
+            quick-tap-ms = <150>;
+            require-prior-idle-ms = <100>;
+            #binding-cells = <2>;
+            bindings = <&mo>, <&sk>;
+        };
         hml: hml {
             compatible = "zmk,behavior-hold-tap";
             tapping-term-ms = <400>;
@@ -112,7 +125,7 @@
 &kp Q         &kp W         &kp E         &kp R         &kp T                                             &kp Y         &kp U         &kp I         &kp O         &kp P         
 &hml LGUI A   &hml LALT S   &hml LCTRL D  &hml LSHFT F  &hml RALT G                                       &hmr RALT H   &hmr RSHFT J  &hmr LCTRL K  &hmr LALT L   &hmr RGUI SEMI
 &kp Z         &kp X         &kp C         &kp V         &kp B                                             &kp N         &kp M         &kp COMMA     &kp DOT       &kp FSLH      
-                                                        &lth NAV BSPC &lth NUM DEL          &lt NAV RET   &lt SYM SPACE
+                                                        &lth NAV BSPC &lths NUM LSHFT       &lt NAV RET   &lt SYM SPACE
             >;
         };
 
@@ -120,7 +133,7 @@
             bindings = <
 //            |             |             |             |             |             |                     |             |             |             |             |             
 &none         &none         &none         &none         &none                                             &kp LA(LEFT)  &none         &none         &kp LA(RIGHT) &kp CAPS      
-&kp LGUI      &kp LALT      &kp LCTRL     &kp LSHFT     &kp RALT                                          &kp LEFT      &kp DOWN      &kp UP        &kp RIGHT     &caps_word    
+&kp LGUI      &sk LALT      &sk LCTRL     &sk LSHFT     &sk RALT                                          &kp LEFT      &kp DOWN      &kp UP        &kp RIGHT     &caps_word    
 &none         &none         &none         &none         &none                                             &kp HOME      &kp PG_DN     &kp PG_UP     &kp END       &kp PSCRN     
                                                         &none         &none                 &none         &none
             >;
@@ -130,7 +143,7 @@
             bindings = <
 //            |             |             |             |             |             |                     |             |             |             |             |             
 &none         &none         &none         &none         &none                                             &kp GRAVE     &kp N7        &kp N8        &kp N9        &kp BSLH      
-&kp LGUI      &kp LALT      &kp LCTRL     &kp LSHFT     &kp RALT                                          &kp MINUS     &kp N4        &kp N5        &kp N6        &kp EQUAL     
+&kp LGUI      &sk LALT      &sk LCTRL     &sk LSHFT     &sk RALT                                          &kp MINUS     &kp N4        &kp N5        &kp N6        &kp EQUAL     
 &none         &none         &none         &none         &none                                             &kp COMMA     &kp N1        &kp N2        &kp N3        &kp DOT       
                                                         &none         &none                 &kp BSPC      &kp N0
             >;
@@ -140,7 +153,7 @@
             bindings = <
 //            |             |             |             |             |             |                     |             |             |             |             |             
 &kp CAPS      &kp GRAVE     &kp LBKT      &kp RBKT      &none                                             &none         &none         &none         &none         &none         
-&caps_word    &kp APOS      &kp LPAR      &kp RPAR      &none                                             &kp RALT      &kp RSHFT     &kp RCTRL     &kp LALT      &kp RGUI      
+&caps_word    &kp APOS      &kp LPAR      &kp RPAR      &none                                             &sk RALT      &sk RSHFT     &sk RCTRL     &sk LALT      &sk RGUI      
 &none         &kp BSLH      &kp LBRC      &kp RBRC      &none                                             &none         &none         &none         &none         &none         
                                                         &kp DEL       &none                 &none         &none
             >;
