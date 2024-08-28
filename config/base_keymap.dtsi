@@ -49,19 +49,17 @@
     combos {
         compatible = "zmk,combos";
 
-        COMBO(wr_esc,         &kp ESC,      1  3,    QWE,     30,  200)
-        COMBO(er_tab,         &kp TAB,      2  3,    QWE,     15,  200)
+        COMBO(wr_esc,         &kp ESC,      1  3,    QWE,     15,  100)
+        COMBO(er_tab,         &kp TAB,      2  3,    QWE,     15,  100)
         COMBO(sf_grave,       &kp GRAVE,   11 13,    QWE,     30,  200)
         COMBO(lthumb_ltfun,   &mo FUN,     30 31,    QWE,     50,  200)
 
-        COMBO(uo_bslh,        &kp BSLH,     6  8,    QWE,     50,  300)
+        COMBO(uo_bslh,        &kp BSLH,     6  8,    QWE,     30,  300)
         COMBO(jl_apos,        &kp APOS,    16 18,    QWE,     50,  200)
-        COMBO(coldot_enter,   &kp RET,     27 28,    QWE NUM, 50,  200)
+        COMBO(comdot_enter,   &kp RET,     27 28,    QWE NUM, 50,  100)
+        COMBO(mcol_dash,      &kp MINUS,   26 27,    QWE NUM, 50,  100)
+
         COMBO(rthum_adjust,   &mo ADJ,     32 33,    QWE,     50,  200)
-
-        COMBO(mcol_dash,      &kp MINUS,   26 27,    QWE,     50,  200)
-
-        COMBO(shift_capsword, &caps_word,  13 16,    QWE,     50,  350)
     };
 
     behaviors {
@@ -114,6 +112,13 @@
             hold-trigger-on-release;
             require-prior-idle-ms = <120>;
         };
+        td_ss: tap_dance_mod_tap {
+            // Space/shift on the left thumb
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <250>;
+            bindings = <&lths NUM LSHFT>, <&caps_word>;
+        };
     };
 
     keymap {
@@ -145,7 +150,7 @@
 &none         &none         &none         &none         &none                                             &kp GRAVE     &kp N7        &kp N8        &kp N9        &kp BSLH      
 &kp LGUI      &sk LALT      &sk LCTRL     &sk LSHFT     &sk RALT                                          &kp MINUS     &kp N4        &kp N5        &kp N6        &kp EQUAL     
 &none         &none         &none         &none         &none                                             &kp COMMA     &kp N1        &kp N2        &kp N3        &kp DOT       
-                                                        &none         &none                 &kp BSPC      &kp N0
+                                                        &kp SPACE     &none                 &kp BSPC      &kp N0
             >;
         };
 
