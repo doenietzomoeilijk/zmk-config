@@ -49,7 +49,8 @@
     combos {
         compatible = "zmk,combos";
 
-        COMBO(wr_esc,         &kp ESC,      1  3,    QWE,     15,  100)
+        /* COMBO(wr_esc,         &kp ESC,      1  3,    QWE,     15,  100) */
+        COMBO(we_esc,         &kp ESC,      1  2,    QWE,     20,  100)
         COMBO(er_tab,         &kp TAB,      2  3,    QWE,     15,  100)
         COMBO(sf_grave,       &kp GRAVE,   11 13,    QWE,     30,  200)
         COMBO(lthumb_ltfun,   &mo FUN,     30 31,    QWE,     50,  200)
