@@ -131,7 +131,7 @@
 &kp Q         &kp W         &kp E         &kp R         &kp T                                             &kp Y         &kp U         &kp I         &kp O         &kp P         
 &hml LGUI A   &hml LALT S   &hml LCTRL D  &hml LSHFT F  &hml RALT G                                       &hmr RALT H   &hmr RSHFT J  &hmr LCTRL K  &hmr LALT L   &hmr RGUI SEMI
 &kp Z         &kp X         &kp C         &kp V         &kp B                                             &kp N         &kp M         &kp COMMA     &kp DOT       &kp FSLH      
-                                                        &lth NAV BSPC &lths NUM LSHFT       &lt NAV SPACE &lt SYM SPACE
+                                                        &lth NAV BSPC &lths NUM LSHFT       &lt NAV ESC   &lt SYM SPACE
             >;
         };
 
