@@ -28,14 +28,30 @@ for board in lily58 cradio; do
         echo "*** ${board} / ${side} side ***" >> $LOG
         echo "**********************************************************************" >> $LOG
 
-        if [[ $side == "left" ]]; then pristine="--pristine"; else pristine=""; fi
-        # pristine="--pristine"
+        if [[ $side == "left" ]]; then 
+            pristine="--pristine";
+            studio_snippet="-S studio-rpc-usb-uart"; #  -S zmk-usb-logging
+            studio_config="-DCONFIG_ZMK_STUDIO=y";
+            studio_config="";
+        else
+            pristine="";
+            studio_snippet="";
+            studio_config="";
+        fi
+
+        echo "Command line:"
+        echo west build ${pristine} -b nice_nano_v2 -s "${ZMKDIR}/app" -d "build/${board}/${side}" ${studio_snippet} -- -DZMK_CONFIG=/zmk-config/config -DSHIELD="${board}_${side}" ${studio_config}
+        echo ""
 
         west build ${pristine} -b nice_nano_v2 \
             -s "${ZMKDIR}/app" \
-            -d "build/${board}/${side}" -- \
+            -d "build/${board}/${side}" \
+            ${studio_snippet} \
+            -- \
             -DZMK_CONFIG=/zmk-config/config \
-            -DSHIELD="${board}_${side}" >> $LOG 2>&1
+            -DSHIELD="${board}_${side}" \
+            ${studio_config} \
+            >> $LOG 2>&1
 
         outfile="${ZMKDIR}/build/${board}/${side}/zephyr/zmk.uf2" 
         [[ -f "${outfile}" ]] && cp "${outfile}" "${OUTDIR}/${board}-${side}-${NOW}-${REV}.uf2"

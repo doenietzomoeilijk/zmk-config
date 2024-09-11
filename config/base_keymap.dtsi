@@ -126,6 +126,7 @@
         compatible = "zmk,keymap";
 
         QWE_layer {
+            display-name = "QWERTY";
             bindings = <
 //            |             |             |             |             |                     |             |             |             |             |             |             
 &kp Q         &kp W         &kp E         &kp R         &kp T                                             &kp Y         &kp U         &kp I         &kp O         &kp P         
@@ -180,7 +181,7 @@
 //            |             |             |             |             |             |                     |             |             |             |             |             
 &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                                      &none         &kp C_VOL_UP  &kp C_BRI_UP  &none         &none         
 &bt BT_DISC 0 &bt BT_DISC 1 &bt BT_DISC 2 &bt BT_DISC 3 &bt BT_DISC 4                                     &none         &kp C_VOL_DN  &kp C_BRI_DN  &none         &none         
-&bt BT_CLR    &none         &none         &out OUT_USB  &out OUT_BLE                                      &none         &kp C_MUTE    &none         &none         &none         
+&bt BT_CLR    &none        &studio_unlock &out OUT_USB  &out OUT_BLE                                      &none         &kp C_MUTE    &none         &none         &none         
                                                         &none         &none                 &none         &none
             >;
         };
