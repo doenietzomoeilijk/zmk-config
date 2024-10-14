@@ -57,8 +57,8 @@
 
         COMBO(uo_bslh,        &kp BSLH,     6  8,    QWE,     30,  200)
         COMBO(jl_apos,        &kp APOS,    16 18,    QWE,     50,  200)
-        COMBO(comdot_enter,   &kp RET,     27 28,    QWE NUM, 50,  100)
-        COMBO(mcol_dash,      &kp MINUS,   26 27,    QWE NUM, 50,  100)
+        COMBO(comdot_enter,   &kp RET,     27 28,    QWE NUM, 40,  25)
+        COMBO(mcom_dash,      &kp MINUS,   26 27,    QWE NUM, 50,  50)
 
         COMBO(rthum_adjust,   &mo ADJ,     32 33,    QWE,     50,  200)
     };
