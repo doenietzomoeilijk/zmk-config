@@ -32,7 +32,6 @@ for board in lily58 cradio; do
             pristine="--pristine";
             studio_snippet="-S studio-rpc-usb-uart"; #  -S zmk-usb-logging
             studio_config="-DCONFIG_ZMK_STUDIO=y";
-            studio_config="";
         else
             pristine="";
             studio_snippet="";
