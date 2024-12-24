@@ -71,25 +71,21 @@
             #binding-cells = <2>;
             bindings = <&mo>, <&kp>;
         };
-        lthl: layer_tap_hold_linger {
-            compatible = "zmk,behavior-hold-tap";
-            tapping-term-ms = <300>;
-            flavor = "hold-preferred";
-            hold-while-undecided-linger;
-            quick-tap-ms = <150>;
-            #binding-cells = <2>;
-            bindings = <&kp>, <&kp>;
-        };
         lths: layer_tap_hold_sticky {
             compatible = "zmk,behavior-hold-tap";
-            tapping-term-ms = <300>;
-            flavor = "balanced";
-            quick-tap-ms = <150>;
-            require-prior-idle-ms = <100>;
+            flavor = "hold-preferred";
+            hold-while-undecided;
+            tapping-term-ms = <50>;
             #binding-cells = <2>;
             bindings = <&mo>, <&sk>;
         };
-        hml: hml {
+        td_sss: tap_dance_super_shift {
+            compatible = "zmk,behavior-tap-dance";
+            tapping-term-ms = <350>;
+            #binding-cells = <0>;
+            bindings = <&lths NUM LSHFT>, <&caps_word>, <&kp CAPS>;
+        };
+        hml: home_row_mods_left {
             compatible = "zmk,behavior-hold-tap";
             tapping-term-ms = <400>;
             quick-tap-ms = <150>;
@@ -100,7 +96,7 @@
             hold-trigger-on-release;
             require-prior-idle-ms = <120>;
         };
-        hmr: hmr {
+        hmr: home_row_mods_right {
             compatible = "zmk,behavior-hold-tap";
             tapping-term-ms = <400>;
             quick-tap-ms = <150>;
@@ -110,13 +106,6 @@
             hold-trigger-key-positions = <KEYS_L THUMBS>;
             hold-trigger-on-release;
             require-prior-idle-ms = <120>;
-        };
-        td_sss: tap_dance_super_shift {
-            label = "Super Smart Shift";
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <250>;
-            bindings = <&lths NUM LSHFT>, <&caps_word>, <&kp CAPS>;
         };
     };
 
