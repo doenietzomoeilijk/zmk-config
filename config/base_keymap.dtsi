@@ -53,8 +53,7 @@
 
         COMBO(uo_bslh,        &kp BSLH,     6  7,    QWE NUM, 30,  200)
         COMBO(io_pipe,        &kp PIPE,     7  8,    QWE NUM, 30,  200)
-        COMBO(jk_apos,        &kp APOS,    16 17,    QWE,     50,  200)
-        COMBO(kl_quot,        &kp DQT,     17 18,    QWE,     50,  200)
+        COMBO(kl_apos,        &kp APOS,    17 18,    QWE,     50,  200)
         COMBO(comdot_enter,   &kp RET,     27 28,    QWE NUM, 40,  25)
         COMBO(mcom_dash,      &kp MINUS,   26 27,    QWE NUM, 50,  50)
 
